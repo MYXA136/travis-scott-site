@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis Scott — Дискография</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">DISCOGRAPHY</div>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="about.html">Об авторе</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cookie-bar">
+        <div class="container cookie-flex">
+            <span id="visit-info">Загрузка статистики визитов...</span>
+            <button id="clear-cookie-btn" class="btn-sm">Сбросить историю</button>
+        </div>
+    </div>
+
+    <main class="container shadow-box">
+        <section class="hero author-profile">
+            <div class="author-info">
+                <h1>Travis Scott (Жак Берман Уэбстер II)</h1>
+                <p class="subtitle">Американский рэпер, певец, автор песен и музыкальный продюсер.</p>
+                <p>Трэвис Скотт известен своим культовым звучанием с обилием автотюна, атмосферными битами и невероятной энергетикой на живых выступлениях. Он перевернул представление о современном трэпе.</p>
+            </div>
+            
+            <img src="travis.jpg" alt="Travis Scott" class="author-photo zoomable-img" style="border-radius: 8px; width: 220px; height: 220px; cursor: pointer;">
+        </section>
+
+        <section class="albums">
+            <h2>Студийные альбомы</h2>
+            <div class="album-grid" style="margin-bottom: 30px;">
+                <div class="album-card">
+                    <h3>Rodeo</h3>
+                    <span class="year">2015</span>
+                    <p>Дебютный студийный альбом, закрепивший за Трэвисом статус главного новатора индустрии.</p>
+                </div>
+                <div class="album-card">
+                    <h3>Birds in the Trap Sing McKnight</h3>
+                    <span class="year">2016</span>
+                    <p>Пластинка, подарившая миру хит «Goosebumps» и возглавившая престижный чарт Billboard 200.</p>
+                </div>
+                <div class="album-card">
+                    <h3>Astroworld</h3>
+                    <span class="year">2018</span>
+                    <p>Грандиозный трибьют закрытому парку развлечений в Хьюстоне. Номинация на Грэмми и статус платины.</p>
+                </div>
+                <div class="album-card">
+                    <h3>Utopia</h3>
+                    <span class="year">2023</span>
+                    <p>Долгожданный масштабный концептуальный альбом с экспериментальным и мрачным звучанием.</p>
+                </div>
+            </div>
+
+            <h2>Совместные альбомы и компиляции</h2>
+            <div class="album-grid" style="margin-bottom: 30px;">
+                <div class="album-card">
+                    <h3>Huncho Jack, Jack Huncho</h3>
+                    <span class="year">2017</span>
+                    <p>Коллаборационный альбом со свирепым вайбом, записанный совместно с Quavo из группы Migos.</p>
+                </div>
+                <div class="album-card">
+                    <h3>JACKBOYS</h3>
+                    <span class="year">2019</span>
+                    <p>Проект-компиляция от участников лейбла Cactus Jack Records с мощнейшим ремиксом на «Highest in the Room».</p>
+                </div>
+                <div class="album-card">
+                    <h3>JACKBOYS 2</h3>
+                    <span class="year">2025</span>
+                    <p>Продолжение культового командного релиза со свежим клубным и трэп-звучанием от кактусовой банды.</p>
+                </div>
+            </div>
+
+            <h2>Микстейпы</h2>
+            <div class="album-grid">
+                <div class="album-card">
+                    <h3>Owl Pharaoh</h3>
+                    <span class="year">2013</span>
+                    <p>Самый первый официальный микстейп Трэвиса, заложивший основы его фирменного сырого стиля.</p>
+                </div>
+                <div class="album-card">
+                    <h3>Days Before Rodeo</h3>
+                    <span class="year">2014</span>
+                    <p>Легендарный андеграунд-релиз, ставший прелюдией к Rodeo и ставший классикой жанра.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="comments-section" style="margin-top: 50px; border-top: 1px solid #333; padding-top: 30px;">
+            <h2>Отзывы слушателей</h2>
+            
+            <form id="comment-form" style="background: #242424; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+                <div style="margin-bottom: 15px;">
+                    <label>Релиз: </label>
+                    <select id="form-album" style="background: #121212; color: #fff; padding: 5px; border: 1px solid #ff4500;">
+                        <option value="Rodeo">Rodeo</option>
+                        <option value="Birds in the Trap">Birds in the Trap Sing McKnight</option>
+                        <option value="Astroworld">Astroworld</option>
+                        <option value="Utopia">Utopia</option>
+                        <option value="Huncho Jack, Jack Huncho">Huncho Jack, Jack Huncho</option>
+                        <option value="JACKBOYS">JACKBOYS</option>
+                        <option value="JACKBOYS 2">JACKBOYS 2</option>
+                        <option value="Owl Pharaoh">Owl Pharaoh</option>
+                        <option value="Days Before Rodeo">Days Before Rodeo</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <input type="text" id="form-username" placeholder="Ваше имя" required style="width: 100%; max-width: 300px; background: #121212; color: #fff; padding: 8px; border: 1px solid #333; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <textarea id="form-text" placeholder="Ваш отзыв о релизе..." required style="width: 100%; height: 80px; background: #121212; color: #fff; padding: 8px; border: 1px solid #333; border-radius: 4px; resize: none;"></textarea>
+                </div>
+                <button type="submit" class="btn">Оставить отзыв</button>
+            </form>
+
+            <div style="margin-bottom: 20px;">
+                <label>Фильтр по релизам: </label>
+                <select id="filter-album" style="background: #242424; color: #fff; padding: 8px; border: 1px solid #333;">
+                    <option value="All">Все релизы</option>
+                    <option value="Rodeo">Rodeo</option>
+                    <option value="Birds in the Trap">Birds in the Trap Sing McKnight</option>
+                    <option value="Astroworld">Astroworld</option>
+                    <option value="Utopia">Utopia</option>
+                    <option value="Huncho Jack, Jack Huncho">Huncho Jack, Jack Huncho</option>
+                    <option value="JACKBOYS">JACKBOYS</option>
+                    <option value="JACKBOYS 2">JACKBOYS 2</option>
+                    <option value="Owl Pharaoh">Owl Pharaoh</option>
+                    <option value="Days Before Rodeo">Days Before Rodeo</option>
+                </select>
+            </div>
+
+            <div id="comments-container"></div>
+        </section>
+    </main>
+
+    <div id="image-modal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); padding-top: 60px;">
+        <span class="modal-close" style="position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img class="modal-content" id="modal-img" style="margin: auto; display: block; max-width: 80%; max-height: 80%;">
+    </div>
+
+    <script>
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    function setCookie(name, value, days = 7) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()}; path=/`;
+    }
+
+    function deleteCookie(name) {
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+    }
+
+    function updateVisitStats() {
+        const infoSpan = document.getElementById('visit-info');
+        if (!infoSpan) return;
+
+        try {
+            const lastVisit = getCookie('lastVisit');
+            let pageViews = parseInt(getCookie('pageViews') || '0');
+
+            pageViews++;
+            setCookie('pageViews', pageViews);
+
+            let infoText = `Вы посмотрели страниц: ${pageViews}. `;
+            if (lastVisit) {
+                infoText += `Ваш прошлый визит: ${lastVisit}`;
+            } else {
+                infoText += "Это ваш первый визит за последнее время!";
+            }
+            infoSpan.textContent = infoText;
+
+            const now = new Date().toLocaleString('ru-RU');
+            setCookie('lastVisit', now);
+        } catch (e) {
+            console.error("Ошибка в блоке кук:", e);
+        }
+    }
+
+    const clearBtn = document.getElementById('clear-cookie-btn');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            deleteCookie('lastVisit');
+            deleteCookie('pageViews');
+            alert('История посещений очищена. Страница будет перезагружена.');
+            location.reload();
+        });
+    }
+
+    function initModal() {
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const closeBtn = document.querySelector('.modal-close');
+        const zoomImages = document.querySelectorAll('.zoomable-img');
+
+        if (!modal || !modalImg || !closeBtn || zoomImages.length === 0) return;
+
+        zoomImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
+    async function loadComments() {
+        const commentsContainer = document.getElementById('comments-container');
+        const filterAlbum = document.getElementById('filter-album');
+        
+        if (!commentsContainer) return;
+
+        try {
+            const albumFilter = filterAlbum ? filterAlbum.value : 'All';
+            const response = await fetch(`/api/comments?album=${albumFilter}`);
+            
+            if (!response.ok) throw new Error(`Ошибка сервера: ${response.status}`);
+            
+            const comments = await response.json();
+            commentsContainer.innerHTML = '';
+            
+            if (comments.length === 0) {
+                commentsContainer.innerHTML = '<p style="color: #777;">Отзывов пока нет.</p>';
+                return;
+            }
+
+            comments.forEach(c => {
+                const card = document.createElement('div');
+                card.style = "background: #242424; padding: 15px; border-left: 4px solid #ff4500; margin-bottom: 15px; border-radius: 0 4px 4px 0;";
+                card.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #ff4500; margin-bottom: 5px;">
+                        <strong>${c.username} <span style="color: #aaa;">о релизе</span> ${c.album_name}</strong>
+                        <span>${new Date(c.created_at).toLocaleString('ru-RU')}</span>
+                    </div>
+                    <p id="text-${c.id}" style="margin-bottom: 10px; color: #fff;">${c.comment_text}</p>
+                    <div style="display: flex; gap: 10px;">
+                        <button onclick="editComment(${c.id})" class="btn-sm">Редактировать</button>
+                        <button onclick="deleteComment(${c.id})" class="btn-sm" style="border-color: #777; color: #777;">Удалить</button>
+                    </div>
+                `;
+                commentsContainer.appendChild(card);
+            });
+        } catch (e) {
+            console.error("Не удалось загрузить комментарии:", e);
+            commentsContainer.innerHTML = '<p style="color: #ff4500;">Ошибка загрузки отзывов. Сервер отвечает некорректно.</p>';
+        }
+    }
+
+    const commentForm = document.getElementById('comment-form');
+    if (commentForm) {
+        commentForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            try {
+                const album_name = document.getElementById('form-album').value;
+                const username = document.getElementById('form-username').value;
+                const comment_text = document.getElementById('form-text').value;
+
+                await fetch('/api/comments', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ album_name, username, comment_text })
+                });
+
+                document.getElementById('form-username').value = '';
+                document.getElementById('form-text').value = '';
+                loadComments();
+            } catch (e) {
+                console.error("Ошибка при отправке комментария:", e);
+            }
+        });
+    }
+
+    async function editComment(id) {
+        const p = document.getElementById(`text-${id}`);
+        if (!p) return;
+        const oldText = p.textContent;
+        const newText = prompt("Отредактируйте ваш отзыв:", oldText);
+        
+        if (newText && newText.trim() !== "" && newText !== oldText) {
+            await fetch(`/api/comments/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ comment_text: newText })
+            });
+            loadComments();
+        }
+    }
+
+    async function deleteComment(id) {
+        if (confirm("Вы уверены, что хотите удалить этот отзыв?")) {
+            await fetch(`/api/comments/${id}`, { method: 'DELETE' });
+            loadComments();
+        }
+    }
+
+    const filterAlbum = document.getElementById('filter-album');
+    if (filterAlbum) {
+        filterAlbum.addEventListener('change', loadComments);
+    }
+
+    // Старт
+    updateVisitStats();
+    initModal();
+    loadComments();
+    </script>
+</body>
+</html

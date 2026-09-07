@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О программе / Об авторе</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">DISCOGRAPHY</div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="about.html" class="active">Об авторе</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cookie-bar">
+        <div class="container cookie-flex">
+            <span id="visit-info">Загрузка статистики визитов...</span>
+            <button id="clear-cookie-btn" class="btn-sm">Сбросить историю</button>
+        </div>
+    </div>
+
+    <main class="container shadow-box">
+        <section class="about-section">
+            <h1>О проекте и авторе</h1>
+            
+            <div class="author-profile">
+                <img src="me.jpg" alt="Фото автора проекта" class="author-photo zoomable-img" style="cursor: pointer;">
+                
+                <div class="author-info">
+                    <h2>Мухаметов Артём Альбертович</h2>
+                    <p class="bio"><strong>Краткая справка:</strong> Я являюсь студентом, увлекаюсь современной хип-хоп культурой. Данный сайт разработан в рамках учебного задания.</p>
+                </div>
+            </div>
+
+            <div class="project-desc">
+                <h3>О программе (о сайте)</h3>
+                <p>Этот статический веб-сайт посвящен дискографии артиста Travis Scott.</p>
+            </div>
+
+            <div class="feedback">
+                <h3>Обратная связь</h3>
+                <p>Вы можете напрямую написать мне на электронную почту:</p>
+                <a href="mailto:artemmuhametov89@gmail.com" class="btn">Написать письмо</a>
+            </div>
+
+            <div class="links">
+                <h3>Внешние ресурсы</h3>
+                <ul>
+                    <li><a href="https://vk.ru/evook_s" target="_blank">Мой профиль Вконтакте</a></li>
+                    <li><a href="https://travisscott.com" target="_blank">Официальный сайт Трэвиса Скотта</a></li>
+                    <li><a href="https://genius.com" target="_blank">Разбор текстов на Genius</a></li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <a href="index.html" class="btn btn-secondary">&larr; Вернуться на главную</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="image-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Автор проекта: Мухаметов А.А.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
