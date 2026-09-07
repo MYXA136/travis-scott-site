@@ -90,7 +90,7 @@ async function loadComments() {
 
     try {
         const albumFilter = filterAlbum ? filterAlbum.value : 'All';
-        const response = await fetch(`/api/comments?album=${albumFilter}`);
+        const response = await fetch(`/api/comments.php?album=${encodeURIComponent(albumFilter)}`);
         
         if (!response.ok) throw new Error(`Ошибка сервера: ${response.status}`);
         
@@ -161,11 +161,16 @@ if (commentForm) {
             const username = document.getElementById('form-username').value;
             const comment_text = document.getElementById('form-text').value;
 
-            await fetch('/api/comments', {
+            await fetch('/api/comments.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ album_name, username, comment_text })
             });
+
+            if (!response.ok) {
+                const error = await response.json().catch(() => ({}));
+                throw new Error(error.error || `Ошибка сервера: ${response.status}`);
+            }
 
             document.getElementById('form-username').value = '';
             document.getElementById('form-text').value = '';
@@ -184,18 +189,28 @@ async function editComment(id) {
     const newText = prompt("Отредактируйте ваш отзыв:", oldText);
     
     if (newText && newText.trim() !== "" && newText !== oldText) {
-        await fetch(`/api/comments/${id}`, {
+        const response = await fetch(`/api/comments.php?id=${encodeURIComponent(id)}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ comment_text: newText })
         });
+        if (!response.ok) {
+            const error = await response.json().catch(() => ({}));
+            alert(error.error || 'Ошибка изменения комментария');
+            return;
+        }
         loadComments();
     }
 }
 
 async function deleteComment(id) {
     if (confirm("Вы уверены, что хотите удалить этот отзыв?")) {
-        await fetch(`/api/comments/${id}`, { method: 'DELETE' });
+        const response = await fetch(`/api/comments.php?id=${encodeURIComponent(id)}`, { method: 'DELETE' });
+        if (!response.ok) {
+            const error = await response.json().catch(() => ({}));
+            alert(error.error || 'Ошибка удаления комментария');
+            return;
+        }
         loadComments();
     }
 }
